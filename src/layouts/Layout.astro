@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import ImageIcon from '../images/logo.svg'
 
 interface Props {
 	title: string;
@@ -13,6 +15,7 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
 		<title>Mincomps - Design System</title>
 		<meta name="title" content="Mincomps - Design System" />
 		<meta name="description" content="Mincomps is a design system, this website is in charge of collecting different components and modifying them to give them a minimalist approach." />
@@ -20,14 +23,13 @@ const { title } = Astro.props;
 		<meta property="og:url" content="https://zoroskr.github.io/mincomps/" />
 		<meta property="og:title" content="Mincomps - Design System" />
 		<meta property="og:description" content="Mincomps is a design system, this website is in charge of collecting different components and modifying them to give them a minimalist approach." />
-		<meta property="og:image" content="../images/logo.png" />
+		<meta property="og:image" content={ImageIcon.src}  />
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://zoroskr.github.io/mincomps/" />
 		<meta property="twitter:title" content="Mincomps - Design System" />
 		<meta property="twitter:description" content="Mincomps is a design system, this website is in charge of collecting different components and modifying them to give them a minimalist approach." />
-		<meta property="twitter:image" content="../images/logo.png" />
-
-
+		<meta property="twitter:image" content={ImageIcon.src}  />
+		<link rel="icon" href={ImageIcon.src} />
 
 	</head>
 	<body class="flex flex-col h-screen bg-white">
