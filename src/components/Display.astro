@@ -1,0 +1,12 @@
+---
+import ButtonCopy from "./ButtonCopy";
+
+let textToCopy = Astro.props.textToCopy;
+
+
+---
+
+<div class={`flex w-auto h-auto flex-col m-6 justify-center`}>
+    <slot/>
+    <ButtonCopy client:load textToCopy={textToCopy}></ButtonCopy>
+</div>

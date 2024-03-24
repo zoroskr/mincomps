@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DefaultCard from '../components/Cards/DefaultCard.astro';
+import ImageCard from '../components/Cards/ImageCard.astro';
+import ButtonCard from '../components/Cards/ButtonCard.astro';
+import Display from '../components/Display.astro';
+
+
+const cardDefaultString = `    <a href="#" class=" max-w-sm p-6 rounded-xl shadow bg-black border-gray-700 hover:bg-gray-900">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Lorem ipsum dolor sit amet.</h5>
+<p class="text-sm font-normal text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur nam temporibus ratione, nisi fugit delectus.</p>
+</a>
+
+`;
+
+const cardImageString = `    <div class="max-w-sm border rounded-xl shadow bg-black border-gray-700">
+        <a href="#">
+            <Image class="rounded-t-lg" src={ImagenCompu} alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Lorem ipsum dolor sit amet.</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur nam temporibus ratione, nisi fugit delectus.</p>
+            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black rounded-lg bg-white hover:bg-gray-400">
+                Button
+            </a>
+        </div>
+    </div>
+`;
+
+const cardButtontString = `    <div class="max-w-sm p-6 rounded-xl shadow bg-black border-gray-700">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Lorem ipsum dolor sit amet.</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur nam temporibus ratione, nisi fugit delectus.</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black rounded-lg bg-white hover:bg-gray-400">
+            Button
+        </a>
+    </div>
+
+`;
+---
+
+<Layout title="Welcome to Astro.">
+            <Display textToCopy={cardDefaultString}>
+               <DefaultCard></DefaultCard>
+            </Display>
+            <Display textToCopy={cardImageString}>
+                <ImageCard></ImageCard>
+            </Display>
+            <Display textToCopy={cardButtontString}>
+                <ButtonCard></ButtonCard>
+            </Display>
+            
+</Layout>
