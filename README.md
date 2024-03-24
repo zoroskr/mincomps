@@ -4,7 +4,7 @@ Mincomps is a design system, this website is in charge of collecting different c
 
 https://zoroskr.github.io/mincomps/
 
-!(/src/images/example-img.png)
+![Texto alternativo](/src/images/example-img.png)
 
 
 ## Installation
